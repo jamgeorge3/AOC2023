@@ -2,7 +2,7 @@ use std::fs;
 use std::collections::HashMap;
 
 #[allow(dead_code)]
-pub fn d21() -> u64 {
+pub fn s1() -> u64 {
 
     let bounds: HashMap<&str, i32> = HashMap::from([
         ("red", 12),
@@ -12,7 +12,7 @@ pub fn d21() -> u64 {
 
     let mut grand_total: u64 = 0;
 
-    for ln_raw in fs::read_to_string("input/d2.input").unwrap().lines() {
+    for ln_raw in fs::read_to_string("data/d2.input").unwrap().lines() {
         let mut game_valid: bool = true;
         let line: Vec<&str> = ln_raw.split(": ").collect::<Vec<_>>();
         let idx: u64 = line[0].split(" ").collect::<Vec<_>>()[1].parse::<u64>().unwrap();
@@ -41,10 +41,10 @@ pub fn d21() -> u64 {
 
 
 #[allow(dead_code)]
-pub fn d22() -> u64 {
+pub fn s2() -> u64 {
     let mut grand_total: u64 = 0;
 
-    for ln_raw in fs::read_to_string("input/d2.input").unwrap().lines() {
+    for ln_raw in fs::read_to_string("data/d2.input").unwrap().lines() {
 
         let mut mins: HashMap<&str, i32> = HashMap::from([
             ("red", 0),
@@ -65,7 +65,7 @@ pub fn d22() -> u64 {
             let ball_count: i32 = balls[0].parse::<i32>().unwrap();
 
             let curr_min: &i32 = mins.get(balls[1]).unwrap();
-            if *curr_min < ball_count {
+            if curr_min < &ball_count {
                 *mins.get_mut(balls[1]).unwrap() = ball_count;
             }
         }
