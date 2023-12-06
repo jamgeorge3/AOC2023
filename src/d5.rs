@@ -109,6 +109,8 @@ pub fn s1() -> i64 {
 
 #[allow(dead_code)]
 pub fn s2() -> i64 {
+    // Horrific and slow but I spent way too long and this is just how it's gon' be
+    
     let (seeds, maps) = get_input(true);
     // println!("Seeds {:?}\nmaps {:?}", all_seeds, maps);
 
