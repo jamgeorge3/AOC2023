@@ -4,6 +4,7 @@ mod d3;
 mod d4;
 mod d5;
 mod d6;
+mod d7;
 
 fn main() {
     // println!("d11 {}", d1::s1());
@@ -21,6 +22,9 @@ fn main() {
     // println!("d51 {}", d5::s1());
     // println!("d52 {}", d5::s2());
 
-    println!("d61 {}", d6::s1());
-    println!("d62 {}", d6::s2());
+    // println!("d61 {}", d6::s1());
+    // println!("d62 {}", d6::s2());
+
+    println!("d71 {}", d7::s1());
+    println!("d72 {}", d7::s2());
 }

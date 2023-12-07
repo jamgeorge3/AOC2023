@@ -49,13 +49,12 @@ fn get_input(test:bool) -> (Vec<i64>, Vec<(String, Vec<MapPiece>)>) {
 
     let num_re: Regex = Regex::new(r"\d+").unwrap();
 
-    let mut parts: Vec<String> = vec![];
-    if test {
-        parts = TEST_INPUT.split("\n\n").map(String::from).collect::<Vec<_>>();
+    let parts: Vec<String> = if test {
+        TEST_INPUT.split("\n\n").map(String::from).collect::<Vec<_>>()
     } else {
-        parts = fs::read_to_string("data/d5.input")
-            .unwrap().split("\r\n\r\n").map(String::from).collect::<Vec<_>>();
-    }
+        fs::read_to_string("data/d5.input")
+            .unwrap().split("\r\n\r\n").map(String::from).collect::<Vec<_>>()
+    };
 
     let seeds: Vec<i64> = num_re.find_iter(&parts[0])
         .map(|x| x.as_str().parse::<i64>().unwrap())
