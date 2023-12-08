@@ -1,10 +1,4 @@
-mod d1;
-mod d2;
-mod d3;
-mod d4;
-mod d5;
-mod d6;
-mod d7;
+use aoc2023::*;
 
 fn main() {
     // println!("d11 {}", d1::s1());
@@ -25,6 +19,10 @@ fn main() {
     // println!("d61 {}", d6::s1());
     // println!("d62 {}", d6::s2());
 
-    println!("d71 {}", d7::s1());
-    println!("d72 {}", d7::s2());
+    // println!("d71 {}", d7::s1());
+    // println!("d72 {}", d7::s2());
+
+    println!("d81 {}", d8::s1());
+    println!("d82 {}", d8::s2());
+
 }
