@@ -22,7 +22,12 @@ fn main() {
     // println!("d71 {}", d7::s1());
     // println!("d72 {}", d7::s2());
 
-    println!("d81 {}", d8::s1());
-    println!("d82 {}", d8::s2());
+    // println!("d81 {}", d8::s1());
+    // println!("d82 {}", d8::s2());
 
+    println!("d91 {}", d9::s1_2(false));
+    println!("d92 {}", d9::s1_2(true));
+
+    // println!("d10-1 {}", d10::s1());
+    // println!("d10-2 {}", d10::s2());
 }
